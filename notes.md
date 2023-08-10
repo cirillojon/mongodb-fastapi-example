@@ -11,3 +11,6 @@ pip install pymongo fastapi uvicorn
 
 ## Run server:
 uvicorn index:app --reload
+
+## Connect to mongodb with:
+mongodb://localhost:27017/
