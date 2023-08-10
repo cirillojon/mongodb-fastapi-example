@@ -23,3 +23,16 @@ def userEntity(item) -> dict:
         "email":item["email"],
         "password":item["password"]   
     }
+
+# `usersEntity` is a utility function designed to transform a list of user documents fetched from MongoDB.
+# It makes use of the `userEntity` function to convert each individual document and then aggregates them into a list.
+# This is especially useful when retrieving multiple user documents from the database and needing them in a consistent,
+# Python-friendly format for the FastAPI application.
+#
+# Usage:
+#     Given a list of MongoDB user documents `docs`, you can convert the entire list using:
+#     `usersEntity(docs)`
+#
+
+def usersEntity(entity) -> list:
+    return [userEntity(item) for item in entity]
