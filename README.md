@@ -15,5 +15,5 @@ uvicorn index:app --reload
 ## Connect to mongodb with:
 mongodb://localhost:27017/
 
-## Swagger page automatically created at:
+## Swagger page automatically created at this url containing all CRUD operations:
 http://127.0.0.1:8000/docs
