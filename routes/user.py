@@ -12,6 +12,10 @@ async def find_all_users():
     print(usersEntity(conn.local.user.find()))
     return usersEntity(conn.local.user.find())
 
+@user.get('/{id}')
+async def find_one_user(id):
+        return userEntity(conn.local.user.find_one({"_id":ObjectId(id)}))
+
 @user.post('/')
 async def create_user(user: User):
     conn.local.user.insert_one(dict(user))
