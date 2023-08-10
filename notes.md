@@ -8,3 +8,6 @@ venv/scripts/activate
 
 ## Install dependencies:
 pip install pymongo fastapi uvicorn
+
+## Run server:
+uvicorn index:app --reload
